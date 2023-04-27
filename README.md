@@ -108,22 +108,59 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://i.imgur.com/1rWxKQT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+***Observe SSH Traffic:***
+
+To SSH in (EX: Labuser@10.0.0.6) Its the username for your VM-Ubuntu and the Private IP address for Ubuntu, then it will ask for the password. It wont visually appear so try your best when trying to login to it. Make sure to exit by simply typing "exit" to end the connection.
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/sfAbQTr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+***Observe DHCP Traffic:***
+
+We will filter for DHCP Traffic only and in the command line type ipconfig /renew to attempt to issue our VM a new IP address.
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/tKjviov.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+***Observe DNS Traffic:***
+
+From your Windows 10 VM in the comman line type nslookup followed by google.com or disney.com to see their IP addresses.
+
 </p>
 <br />
+
+<p>
+<img src="https://i.imgur.com/1nUZOOV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+***Observe RDP Traffic:***
+
+In WireShark filter for RDP only (tcp.port==3389)
+
+It will spam traffic non-stop because RDP is constantly showing you live stream from one computer to another.
+
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/yoSTeFy.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+***This concludes my tutorial of Network Security Protocols and observing traffic between virtual machines.***
+
+</p>
+<br />
+
